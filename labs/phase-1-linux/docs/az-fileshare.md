@@ -14,9 +14,9 @@ az storage account file-service-properties update --enable-delete-retention true
 # 5. Snapshot creation
 az storage share snapshot --account-name <account> --name <share-name>
 
-Idempotency Strategy: Implemented a "Check-Before-Create" logic using az storage account list and az storage share exists. This prevents the script from failing on subsequent runs and ensures the environment remains stable.
+# 6. Idempotency Strategy: Implemented a "Check-Before-Create" logic using az storage account list and az storage share exists. This prevents the script from failing on subsequent runs and ensures the environment remains stable.
 
-Cost Optimization:
+# 7. Cost Optimization:
 
 Tier Selection: Chose Hot Tier over Cool. While Cool has lower storage costs, it carries a 30-day minimum billing penalty. Since this is a lab environment for short-term validation, Hot Tier is more cost-effective.
 
